@@ -1,0 +1,1 @@
+import{H as o,R as n}from"./control.CYgJF_JY.js";function w(r,e){throw isNaN(r)||r<400||r>599?new Error(`HTTP error status codes must be between 400 and 599 — ${r} is invalid`):new o(r,e)}function d(r,e){throw isNaN(r)||r<300||r>308?new Error("Invalid status code"):new n(r,e.toString())}new TextEncoder;export{w as e,d as r};

@@ -1,0 +1,77 @@
+[debug] [2024-03-03T10:48:28.589Z] ----------------------------------------------------------------------
+[debug] [2024-03-03T10:48:28.591Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --except functions
+[debug] [2024-03-03T10:48:28.591Z] CLI Version:   12.4.7
+[debug] [2024-03-03T10:48:28.592Z] Platform:      darwin
+[debug] [2024-03-03T10:48:28.592Z] Node Version:  v18.18.2
+[debug] [2024-03-03T10:48:28.595Z] Time:          Sun Mar 03 2024 11:48:28 GMT+0100 (Central European Standard Time)
+[debug] [2024-03-03T10:48:28.595Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-03T10:48:28.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-03T10:48:28.668Z] > authorizing via signed-in user (jeppeenemarkweb@gmail.com)
+[debug] [2024-03-03T10:48:28.668Z] [iam] checking project linktree-b37d7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-03T10:48:28.670Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions [none]
+[debug] [2024-03-03T10:48:28.670Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions x-goog-quota-user=projects/linktree-b37d7
+[debug] [2024-03-03T10:48:28.671Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T10:48:29.718Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions 200
+[debug] [2024-03-03T10:48:29.719Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T10:48:29.720Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 [none]
+[debug] [2024-03-03T10:48:30.133Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 200
+[debug] [2024-03-03T10:48:30.133Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 {"projectId":"linktree-b37d7","projectNumber":"374840767231","displayName":"linktree","name":"projects/linktree-b37d7","resources":{"hostingSite":"linktree-b37d7","storageBucket":"linktree-b37d7.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_97af8da7-e166-42a1-8da9-e8df28b0b9a4"}
+[debug] [2024-03-03T10:48:32.973Z] defaultcredentials: writing to file /Users/jeppekristiansen/.config/firebase/jeppeenemarkweb_gmail_com_application_default_credentials.json
+[debug] [2024-03-03T10:48:32.976Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites pageToken=&pageSize=10
+[debug] [2024-03-03T10:48:34.415Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites 200
+[debug] [2024-03-03T10:48:34.415Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites {"sites":[{"name":"projects/linktree-b37d7/sites/linktree-b37d7","defaultUrl":"https://linktree-b37d7.web.app","appId":"1:374840767231:web:575213151dc4e22d5112ca","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-03T10:48:34.416Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config [none]
+[debug] [2024-03-03T10:48:35.518Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config 200
+[debug] [2024-03-03T10:48:35.519Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config {"projectId":"linktree-b37d7","appId":"1:374840767231:web:575213151dc4e22d5112ca","storageBucket":"linktree-b37d7.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCgEB7p64-wWTCetU1XWxeLuLmNRIg2XSk","authDomain":"linktree-b37d7.firebaseapp.com","messagingSenderId":"374840767231"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-03-03T10:48:54.220Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:367:42)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-03-03T10:53:43.781Z] ----------------------------------------------------------------------
+[debug] [2024-03-03T10:53:43.783Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-03-03T10:53:43.783Z] CLI Version:   12.0.0
+[debug] [2024-03-03T10:53:43.784Z] Platform:      darwin
+[debug] [2024-03-03T10:53:43.784Z] Node Version:  v18.18.2
+[debug] [2024-03-03T10:53:43.797Z] Time:          Sun Mar 03 2024 11:53:43 GMT+0100 (Central European Standard Time)
+[debug] [2024-03-03T10:53:43.797Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-03T10:53:43.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-03T10:53:43.862Z] > authorizing via signed-in user (jeppeenemarkweb@gmail.com)
+[debug] [2024-03-03T10:53:43.862Z] [iam] checking project linktree-b37d7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-03T10:53:43.864Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions [none]
+[debug] [2024-03-03T10:53:43.865Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions x-goog-quota-user=projects/linktree-b37d7
+[debug] [2024-03-03T10:53:43.865Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T10:53:44.891Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions 200
+[debug] [2024-03-03T10:53:44.891Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linktree-b37d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T10:53:44.892Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 [none]
+[debug] [2024-03-03T10:53:45.499Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 200
+[debug] [2024-03-03T10:53:45.499Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/linktree-b37d7 {"projectId":"linktree-b37d7","projectNumber":"374840767231","displayName":"linktree","name":"projects/linktree-b37d7","resources":{"hostingSite":"linktree-b37d7","storageBucket":"linktree-b37d7.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_97af8da7-e166-42a1-8da9-e8df28b0b9a4"}
+[debug] [2024-03-03T10:53:47.957Z] defaultcredentials: writing to file /Users/jeppekristiansen/.config/firebase/jeppeenemarkweb_gmail_com_application_default_credentials.json
+[debug] [2024-03-03T10:53:47.960Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites pageToken=&pageSize=10
+[debug] [2024-03-03T10:53:49.097Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites 200
+[debug] [2024-03-03T10:53:49.097Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/linktree-b37d7/sites {"sites":[{"name":"projects/linktree-b37d7/sites/linktree-b37d7","defaultUrl":"https://linktree-b37d7.web.app","appId":"1:374840767231:web:575213151dc4e22d5112ca","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-03T10:53:49.098Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config [none]
+[debug] [2024-03-03T10:53:50.217Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config 200
+[debug] [2024-03-03T10:53:50.218Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:374840767231:web:575213151dc4e22d5112ca/config {"projectId":"linktree-b37d7","appId":"1:374840767231:web:575213151dc4e22d5112ca","storageBucket":"linktree-b37d7.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCgEB7p64-wWTCetU1XWxeLuLmNRIg2XSk","authDomain":"linktree-b37d7.firebaseapp.com","messagingSenderId":"374840767231"}
+[debug] [2024-03-03T10:54:08.844Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:348:42)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
